@@ -15,7 +15,7 @@ pkgs.writeShellScriptBin "code-run"
     mkdir -p $PWD/.vscode/.user-data/User
   fi
   if [ ! -f $PWD/.vscode/.user-data/User/settings.json ]; then
-    cp ${settingsPath} $PWD/.vscode/.user-data/User/settings.json
+    ln -s ${settingsPath} $PWD/.vscode/.user-data/User/settings.json
   fi
   # run code with the user data directory set to $PWD/.vscode/.user-data
   ${codeInstance}/bin/codium --user-data-dir=$PWD/.vscode/.user-data $PWD $@

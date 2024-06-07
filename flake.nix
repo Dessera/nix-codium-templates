@@ -30,12 +30,19 @@
             packages = with pkgs; [ nil nixpkgs-fmt packages.codium-nix ];
           };
 
+          # TODO: Change codium to code
           packages.codium-flutter = import ./packages/flutter {
             inherit pkgs;
             inherit codium-extensions;
           };
 
+          # TODO: Change codium to code
           packages.codium-nix = import ./packages/nix {
+            inherit pkgs;
+            inherit codium-extensions;
+          };
+
+          packages.code-cpp = import ./packages/cpp {
             inherit pkgs;
             inherit codium-extensions;
           };
