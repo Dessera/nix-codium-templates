@@ -1,5 +1,4 @@
 {
-  // "workbench.iconTheme": "vscode-icons",
   "editor.renderWhitespace": "boundary",
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "relative",
