@@ -1,7 +1,7 @@
 .direnv
 # vscodium caches
-.code-user/*
-!.code-user/User/
-.code-user/User/*
-!.code-user/User/*.json
-!.code-user/User/snippets/
+.vscode/.user-data/*
+!.vscode/.user-data/User/
+.vscode/.user-data/User/*
+!.vscode/.user-data/User/*.json
+!.vscode/.user-data/User/snippets/
