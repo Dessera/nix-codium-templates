@@ -27,17 +27,17 @@
         rec {
           formatter = pkgs.nixpkgs-fmt;
           devshells.default = {
-            packages = with pkgs; [ nil nixpkgs-fmt packages.codium-nix ];
+            packages = with pkgs; [ nil nixpkgs-fmt packages.code-nix ];
           };
 
           # TODO: Change codium to code
-          packages.codium-flutter = import ./packages/flutter {
+          packages.code-flutter = import ./packages/flutter {
             inherit pkgs;
             inherit codium-extensions;
           };
 
           # TODO: Change codium to code
-          packages.codium-nix = import ./packages/nix {
+          packages.code-nix = import ./packages/nix {
             inherit pkgs;
             inherit codium-extensions;
           };
