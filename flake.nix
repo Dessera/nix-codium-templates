@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Project-based Vscodium template instances";
 
   inputs = {
     nixpkgs = { url = "github:nixos/nixpkgs?ref=nixos-unstable"; };
@@ -30,13 +30,11 @@
             packages = with pkgs; [ nil nixpkgs-fmt packages.code-nix ];
           };
 
-          # TODO: Change codium to code
           packages.code-flutter = import ./packages/flutter {
             inherit pkgs;
             inherit codium-extensions;
           };
 
-          # TODO: Change codium to code
           packages.code-nix = import ./packages/nix {
             inherit pkgs;
             inherit codium-extensions;
@@ -45,6 +43,10 @@
           packages.code-cpp = import ./packages/cpp {
             inherit pkgs;
             inherit codium-extensions;
+          };
+
+          legacyPackages = {
+            utils = import ./utils;
           };
         };
     };
