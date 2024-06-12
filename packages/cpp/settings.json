@@ -54,5 +54,9 @@
   },
   "cmake.options.statusBarVisibility": "compact",
   "cmake.copyCompileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
-  "cmake.configureOnOpen": true
+  "cmake.configureOnOpen": true,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ]
 }
