@@ -20,8 +20,9 @@
       systems = [ "x86_64-linux" ];
       imports = [ devshell.flakeModule ];
       # Development shell
-      perSystem = { config, pkgs, system, ... }:
+      perSystem = { config, system, ... }:
         let
+          pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
           codium-extensions = nix-vscode-extensions.extensions."${system}";
         in
         rec {
