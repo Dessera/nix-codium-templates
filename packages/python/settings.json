@@ -30,5 +30,12 @@
   "vsicons.dontShowNewVersionMessage": true,
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.iconTheme": "vscode-icons",
-  "dart.checkForSdkUpdates": false
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }

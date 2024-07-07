@@ -45,6 +45,11 @@
             inherit codium-extensions;
           };
 
+          packages.code-python = import ./packages/python {
+            inherit pkgs;
+            inherit codium-extensions;
+          };
+
           legacyPackages = {
             utils = import ./utils;
           };
