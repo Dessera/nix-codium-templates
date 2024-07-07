@@ -7,7 +7,6 @@ utils.mkCode {
   inherit pkgs;
   vscode = pkgs.vscode;
   settingsPath = ./settings.json;
-  isSettingMutable = true;
   vscodeExtensions = (with codium-extensions.vscode-marketplace; [
       igorsbitnev.error-gutters
       github.copilot

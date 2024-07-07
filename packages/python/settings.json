@@ -30,6 +30,8 @@
   "vsicons.dontShowNewVersionMessage": true,
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.iconTheme": "vscode-icons",
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "strict",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.inlayHints.callArgumentNames": "partial",
   "python.analysis.inlayHints.functionReturnTypes": true,
