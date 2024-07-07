@@ -13,6 +13,7 @@ let
     "cp ${settingsPath} $PWD/.vscode/.user-data/User/settings.json"
   else
     "ln -s ${settingsPath} $PWD/.vscode/.user-data/User/settings.json";
+  executableName = if vscode == pkgs.vscodium then "codium" else "code";
 in
 pkgs.writeShellScriptBin "code-run"
 ''
@@ -23,5 +24,5 @@ pkgs.writeShellScriptBin "code-run"
     ${settingsCommand}
   fi
   # run code with the user data directory set to $PWD/.vscode/.user-data
-  ${codeInstance}/bin/codium --user-data-dir=$PWD/.vscode/.user-data $PWD $@
+  ${codeInstance}/bin/${executableName} --user-data-dir=$PWD/.vscode/.user-data $PWD $@
 ''
